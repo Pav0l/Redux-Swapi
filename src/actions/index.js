@@ -16,7 +16,6 @@ export const fetchStarWarsData = () => dispatch => {
   dispatch(fetchingData(true));
   axios.get(url)
     .then(resp => {
-      console.log(resp.data.results)
       dispatch(loadedDataSuccessfully(resp.data.results))
     })
     .catch(err => dispatch(failedToLoadData(err)))

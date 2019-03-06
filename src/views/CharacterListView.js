@@ -7,13 +7,8 @@ import { CharacterList } from "../components";
 class CharacterListView extends React.Component {
 
   componentDidMount() {
-    // call our action
     this.props.fetchStarWarsData();
     
-  }
-
-  componentDidUpdate() {
-    console.log(this.props.characters);
   }
 
   render() {
@@ -31,10 +26,9 @@ class CharacterListView extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state', state)
   return ({
-    fetching: state.charsReducer.fetching,
-    characters: state.charsReducer.characters,
+    characters: state.characters,
+    fetching: state.fetching,
   });
 }
 

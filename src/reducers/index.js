@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { charsReducer } from './starWarsReducer';
+import { charsReducer, fetchingReducer, errorReducer } from './starWarsReducer';
 
 const rootReducer = combineReducers({
-  charsReducer
+  characters: charsReducer,
+  fetching: fetchingReducer,
+  error: errorReducer
 });
 
 export default rootReducer;
