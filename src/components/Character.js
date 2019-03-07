@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const Character = props => {
-  return <li>{props.character.name}</li>;
+export default function Character(props) {
+
+  return (
+    <li>
+      <div>
+        <div>{props.character.name}</div>
+        <div>Born: {props.character.birth_year}</div>
+      </div>
+    </li>
+  );
 };
 
-export default Character;
